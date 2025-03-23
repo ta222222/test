@@ -4,69 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test 2</title>
+    <title>test 3</title>
     <style>
-        /* Reset default margins and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body styling */
         body, p, a {
             font-family: Helvetica Neue, sans-serif;
             margin: 0;
             padding: 0;
-            font-size: 0.75rem; /* 12px */
+            font-size: 0.75rem;
             line-height: 2;
             color: inherit;
             text-decoration: none;
             text-transform: uppercase;
         }
 
-        /* Normal mode styles */
         body.normal {
             background-color: white;
             color: black;
         }
 
-        /* Heated mode styles */
         body.heated {
             background-color: red;
             color: white;
         }
 
-        /* Navbar styling */
         nav {
             padding: 1.5em 1.5em 0;
             display: flex;
             gap: 0.75em;
-            margin-bottom: 1.5em;
+            margin-bottom: 2em;
             position: sticky;
             top: 0;
-            background-color: inherit; /* Inherit background for mode changes */
-            z-index: 10; /* Ensure navbar stays on top */
+            background-color: inherit;
+            z-index: 10;
         }
-        
-        /* Navbar for Normal mode */
-body.normal nav {
-    background-color: white; /* White background in normal mode */
-}
 
-            /* Navbar for Heated mode */
-body.heated nav {
-    background-color: red; /* Red background in heated mode */
-}
-        
-        
-        /* Container for the entire layout */
+        body.normal nav {
+            background-color: white;
+        }
+
+        body.heated nav {
+            background-color: red;
+        }
+
         .container {
             max-width: 100vw;
             padding: 0 1.5em;
         }
 
-        .date {
+        .latest {
             font-size: 0.75rem;
             margin-bottom: 0.625rem;
             text-transform: uppercase;
@@ -79,17 +70,13 @@ body.heated nav {
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: -0.0625rem;
-            line-height: 1.1; /* Adjusted line-height for better spacing */
+            line-height: 1.1;
+            display: none; /* Start hidden */
         }
 
         .main-headline {
-            font-size: 2.5rem; /* Increased font size */
-            width: 100%; /* Take full width */
-        }
-
-        .sub-headline {
-            font-size: 2.5rem; /* Adjusted font size */
-            width: 100%; /* Take full width */
+            font-size: 2.5rem;
+            width: 100%;
         }
 
         .footer {
@@ -103,15 +90,10 @@ body.heated nav {
 
         .article-section {
             display: flex;
-            flex-direction: column; /* Stack items vertically on mobile */
-            align-items: center; /* Center items horizontally */
+            flex-direction: column;
+            align-items: center;
             gap: 1.5em;
-            width: 100%; /* Ensure it takes up full width */
-        }
-
-        .article-section h2,
-        .article-section img {
-            width: 100%; /* Take full width on mobile */
+            width: 100%;
         }
 
         .image {
@@ -123,37 +105,27 @@ body.heated nav {
         .image img {
             width: 70%;
             height: auto;
-            margin: 0 auto; /* Center image horizontally */
+            margin: 0 auto;
         }
 
-        /* Center text and elements only on small screens */
-        @media only screen and (max-width: 767px) 
-        {
-    
-            
+        @media only screen and (max-width: 767px) {
             nav {
-                        display: flex;
+                display: flex;
                 flex-direction: row;
-            /*    align-items: center; /* Center the content horizontally */
-            /*    justify-content: center; /* Center the content vertically */
-            /*    text-align: center; /* Center text for headings and paragraphs */
-            padding: 1.5em 1.5em 0;
+                padding: 1.5em 1.5em 0;
             }
-            
+
             .container {
                 display: flex;
                 flex-direction: column;
-             /*   align-items: center; /* Center the content horizontally */
-            /*    justify-content: center; /* Center the content vertically */
-            /*    text-align: center; /* Center text for headings and paragraphs */
                 padding: 0 1.5em;
             }
 
             .article-section {
                 display: flex;
                 flex-direction: column;
-                align-items: center; /* Center items horizontally */
-                justify-content: center; /* Center items vertically */
+                align-items: center;
+                justify-content: center;
                 gap: 1.5em;
                 width: 100%;
             }
@@ -162,18 +134,17 @@ body.heated nav {
             .sub-headline,
             .bottom-headline,
             .article-section h2 {
-                /* text-align: center; Center text for small screens */
-                width: 100%; /* Ensure headlines take up the full width */
-
+                width: 100%;
             }
 
             .article-section img {
-                max-width: 100%; /* Ensure the image scales with screen size */
+                max-width: 100%;
                 height: auto;
             }
         }
     </style>
 </head>
+<body>
     <nav>
         <a href="https://ta222222.github.io/hammernews/" class="navbar-link">
             <b>home</b>
@@ -183,10 +154,10 @@ body.heated nav {
         <a href="#" id="modeToggleLink">heated mode</a>
     </nav>
     <div class="container">
-        <div class="date"><u>MARCH 21 2025</u></div>
+        <div class="latest"><u>HAMMER ONLINE march 23</u></div>
 
         <h1 class="main-headline">LHR AIRPORT CLOSED BY FIRE IN BIGGEST DISRUPTION IN DECADES</h1>
-                <div class="image">
+        <div class="image">
             <img src="https://raw.githubusercontent.com/ta222222/test/main/lhr%20hammer.jpeg">
         </div>
         <div class="article-section">
@@ -194,38 +165,27 @@ body.heated nav {
         </div>
 
         <h3 class="main-headline">JT Premieres "Ran Out" Video by indiana420bitch</h3>
-        <!-- Repeating headlines for demo purposes -->
         <h3 class="main-headline">Nike Comeback Bid Is Threatened by Inventory Reset, Tariffs</h3>
 
         <h1 class="main-headline">APRON RECORDS COLLAB WITH NIKE ON AIR MAX “180”</h1>
         <div class="article-section">
-            <h2 class="main-headline">STEVEN JULIEN FT JAMES MASSIAH - ULTRA</h2><br>
+            <h2 class="main-headline">STEVEN JULIEN FT JAMES MASSIAH - ULTRA</h2>
         </div>
         <div class="image">
             <img src="https://i1.sndcdn.com/artworks-SO5z4ml9DUhEzHPd-plbYQQ-t500x500.jpg">
         </div>
-
         <h3 class="main-headline">Google Agrees to Buy Cloud Security Firm Wiz for $32 Billion</h3>
-        <!-- Repeating headlines for demo purposes -->
-                <h3 class="main-headline">Playboi Carti’s ‘MUSIC:’ When rage finally goes pop</h3>
-                <!-- 
-        <h3 class="main-headline">The Same Tech Behind ChatGPT Is Being Used to Produce Novel Fragrances</h3> -->
-
+        <h3 class="main-headline">Playboi Carti’s ‘MUSIC:’ When rage finally goes pop</h3>
         <h4 class="main-headline">Amelia Gray launches Coperni’s New Ray-Ban Meta Collaboration at Paris Fashion Week</h4>
-    
-
-
-        <h4 class="bottom-headline red">MORE NEWS TO COME...</h4>
-        <p class="bottom-subtext blue">        © 2025 hammer mag
-</p>
+        <h1 class="bottom-headline">MORE NEWS TO COME...</h1>
+        <p class="bottom-subtext">© 2025 hammer mag</p><br>
     </div>
 
     <footer class="footer">
-      <!--  © 2025 hammer mag -->
+    <!--  © 2025 hammer mag -->
     </footer>
 
     <script>
-        // Mode toggle
         const modeToggleLink = document.getElementById('modeToggleLink');
         modeToggleLink.addEventListener('click', (e) => {
             e.preventDefault();
@@ -234,7 +194,6 @@ body.heated nav {
             modeToggleLink.textContent = document.body.classList.contains('heated') ? 'normal mode' : 'heated mode';
         });
 
-        // Set initial mode based on local storage or default to normal
         if(localStorage.getItem('mode') === 'heated') {
             document.body.classList.add('heated');
             document.body.classList.remove('normal');
@@ -245,7 +204,6 @@ body.heated nav {
             modeToggleLink.textContent = 'heated mode';
         }
 
-        // Update Date and Time
         function updateDateTime() {
             const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
             const options = {
@@ -275,8 +233,21 @@ body.heated nav {
                 }, 500);
             });
         });
-        
-        
-        </script>
+
+        // Sequentially reveal headlines
+        function revealHeadlines() {
+            const headlines = document.querySelectorAll('.main-headline, .bottom-headline');
+            headlines.forEach((headline, index) => {
+                setTimeout(() => {
+                    headline.style.display = 'block'; // Show the headline
+                }, index * 1000); // 1 s delay for each headline
+            });
+        }
+
+        // Call the function after the page loads
+        window.onload = function() {
+            revealHeadlines();
+        };
+    </script>
 </body>
 </html>
